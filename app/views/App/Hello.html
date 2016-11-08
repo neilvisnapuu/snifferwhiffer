@@ -1,0 +1,27 @@
+{{set . "title" "Ok We Got It!"}}
+{{template "header.html" .}}
+
+
+
+	<header class="jumbotron" style="background-color:#A9F16C">
+	  <div class="container">
+	    <div class="row">
+	      <h1>SnifferWhiffer</h1>
+
+			<h1>Hello {{.myName}}</h1>
+			<a href="/">Back to form</a>
+
+
+	  </div>
+	</header>
+
+	<div class="container">
+	  <div class="row">
+	    <div class="span6">
+	      {{template "flash.html" .}}
+	    </div>
+	  </div>
+	</div>
+
+
+{{template "footer.html" .}}
