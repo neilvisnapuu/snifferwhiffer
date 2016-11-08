@@ -1,6 +1,7 @@
 package controllers
 
 import "github.com/revel/revel"
+import "github.com/neilvisnapuu/demomgo"
 
 type App struct {
 	*revel.Controller
@@ -21,6 +22,8 @@ func (c App) Hello(myName string) revel.Result {
         c.FlashParams()
         return c.Redirect(App.Index)
     }
+
+    demomgo.BlatherMe(myName)
 
     return c.Render(myName)
 }
