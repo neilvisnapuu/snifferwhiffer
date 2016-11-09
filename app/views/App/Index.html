@@ -4,24 +4,25 @@
 <header class="jumbotron" style="background-color:#A9F16C">
   <div class="container">
     <div class="row">
-      <h1>SnifferWhiffer</h1>
-      <p>If you're going to buy a Saas company, doesn't it make sense to have a team of Saas acquihires and acquirers performing due diligence?</p>
-      <p>Code review, DevOps review, financials, interviews with key employees, assessments of QA, product development, and engineering culture.</p>
-      <p><strong>Multiples should not be something derived from an industry sampler.  Buying a private company should not be reduced to a generic formula.</strong></p>
+      <div class="col-xs-12">
+        <h1>SnifferWhiffer</h1>
+        <p>If you're going to buy a Saas company, doesn't it make sense to have a team of Saas acquihires and acquirers performing due diligence?</p>
+        <p>Code review, DevOps review, financials, interviews with key employees, assessments of QA, product development, and engineering culture.</p>
+        <p><strong>Multiples should not be something derived from an industry sampler.  Buying a private company should not be reduced to a generic formula.</strong></p>
+      </div>
     </div>
+
     <div class="row">
-
-
-      <form class="form-inline" action="/App/Hello" method="GET">
-        <div class="form-group">
-          {{with $field := field "myName" .}}
-              <input type="text" name="{{$field.Name}}" value="{{$field.Flash}}" class="form-control input-lg" style="width: 600px" placeholder="tell us about your interest in our services"/><br/>
-          {{end}}
-        </div>
-        <input type="submit" value="Send Us Your Message!" class="btn btn-default btn-lg"/>
-      </form>
-
-
+      <div class="col-xs-12">
+        <form class="form-inline" action="/App/Hello" method="GET">
+          <div class="form-group">
+            {{with $field := field "myName" .}}
+                <input type="text" name="{{$field.Name}}" value="{{$field.Flash}}" class="form-control input-lg" style="width: 800px;" placeholder="tell us about your interest in our services"/><br/>
+            {{end}}
+          </div>
+          <input type="submit" value="Send Us Your Message!" class="btn btn-default btn-lg"/>
+        </form>
+      </div>
     </div>
 
     <div class="row">
@@ -39,8 +40,10 @@
 
 
     <div class="row">
-      <div class="jumbotron">
-        <a href="App/Archive" class="btn btn-info btn-lg">Find out what people are saying about SnifferWhiffer!</a>      
+      <div class="col-xs-12">
+        <div class="jumbotron">
+          <a href="App/Archive" class="btn btn-info btn-lg">Find out what people are saying about SnifferWhiffer!</a>      
+        </div>
       </div>
     </div>
   </div>
