@@ -9,9 +9,14 @@
 	      <h1>SnifferWhiffer</h1>
 
 			<h1>Ok, we have recorded these messages!</h1>
-			<p class="lead">
-			{{.foo}}
-			</p>
+
+			
+			<ul class="list-group">
+				{{range .foo}}
+  				<li class="list-group-item">{{.Blather}} <span class="badge">{{.Timestamp}}</span></li>
+				{{end}}
+			</ul>
+
 			<a href="/" class="btn btn-success">Back to SnifferWhiffer Home</a>
 
 
