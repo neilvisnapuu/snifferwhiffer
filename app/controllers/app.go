@@ -27,3 +27,10 @@ func (c App) Hello(myName string) revel.Result {
 
     return c.Render(myName)
 }
+
+
+
+func (c App) Archive(myShit string) revel.Result {
+    foo := demomgo.FullReport("")
+    return c.Render(foo)
+}
