@@ -14,8 +14,8 @@ func (c App) Index() revel.Result {
 
 
 func (c App) Hello(myName string) revel.Result {
-    c.Validation.Required(myName).Message("Your name is required!")
-    c.Validation.MinSize(myName, 3).Message("Your name is not long enough!")
+    c.Validation.Required(myName).Message("You have to tell us something!")
+    c.Validation.MinSize(myName, 3).Message("Sorry but 3 chars doesn't cut it!")
 
     if c.Validation.HasErrors() {
         c.Validation.Keep()

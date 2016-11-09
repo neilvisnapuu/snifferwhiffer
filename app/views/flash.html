@@ -9,10 +9,10 @@
 	{{if .flash.error}}
 		{{.flash.error}}
 	{{end}}
-	<ul style="margin-top:10px;">
+	<div>
 		{{range .errors}}
-			<li>{{.}}</li>
+			<p class="lead text-danger"><strong>{{.}}</strong></p>
 		{{end}}
-	</ul>
+	</div>
 </div>
 {{end}}
