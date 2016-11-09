@@ -6,15 +6,19 @@
 	<header class="jumbotron" style="background-color:#A9F16C">
 	  <div class="container">
 	    <div class="row">
-	    <h1>SnifferWhiffer</h1>
-		<h2>Ok, we have recorded these messages!</h2>
-	    <div class="jumbotron">
-			<ul class="list-group">
-				{{range .foo}}
-  				<li class="list-group-item">{{.Blather}} <span class="badge">{{.Timestamp}}</span></li>
-				{{end}}
-			</ul>
-			<a href="/" class="btn btn-success">Back to SnifferWhiffer Home</a>	    	
+	    <div class="col-xs-12">
+
+		    <h1>SnifferWhiffer</h1>
+			<h2>Ok, we have recorded these messages!</h2>
+		    <div class="jumbotron">
+				<ul class="list-group">
+					{{range .foo}}
+	  				<li class="list-group-item">{{.Blather}} <span class="badge">{{.Timestamp}}</span></li>
+					{{end}}
+				</ul>
+				<a href="/" class="btn btn-success">Back to SnifferWhiffer Home</a>	    	
+		    </div>
+
 	    </div>
 
 	  </div>
