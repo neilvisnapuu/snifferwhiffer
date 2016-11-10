@@ -1,0 +1,29 @@
+{{set . "title" "Ok We Got It!"}}
+{{template "header.html" .}}
+
+
+
+	<header class="jumbotron" style="background-color:#42a5f5">
+	  <div class="container">
+	    <div class="row">
+	      <h1>SnifferWhiffer</h1>
+		  <h2>Ok, we have pruned your string!</h2>
+		  <div class="jumbotron">
+			<p class="lead">
+			{{.myName}}
+			</p>
+			<a href="/App/Archive" class="btn btn-success btn-lg">Back to SnifferWhiffer Archives</a>		  	
+		  </div>
+	  </div>
+	</header>
+
+	<div class="container">
+	  <div class="row">
+	    <div class="span6">
+	      {{template "flash.html" .}}
+	    </div>
+	  </div>
+	</div>
+
+
+{{template "footer.html" .}}
