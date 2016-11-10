@@ -30,6 +30,24 @@ func (c App) Hello(myName string) revel.Result {
 
 
 
+
+func (c App) Prune(myName string) revel.Result {
+    c.Validation.Required(myName).Message("You have to tell us something!")
+    c.Validation.MinSize(myName, 3).Message("Sorry but 3 chars doesn't cut it!")
+
+    if c.Validation.HasErrors() {
+        c.Validation.Keep()
+        c.FlashParams()
+        return c.Redirect(App.Index)
+    }
+
+    demomgo.PruneMe(myName,"gooney goo goo")
+
+    return c.Render(myName)
+}
+
+
+
 func (c App) Archive(myShit string) revel.Result {
     foo := demomgo.FullReport("")
     return c.Render(foo)

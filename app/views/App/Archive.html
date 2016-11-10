@@ -20,8 +20,22 @@
 		    </div>
 
 	    </div>
-
 	  </div>
+	  <br/><br/>
+	    <div class="row">
+	      <div class="col-xs-12">
+	        <form action="/App/Prune" method="GET">
+	          <div class="form-group">
+	            {{with $field := field "myName" .}}
+	                <input type="text" name="{{$field.Name}}" value="{{$field.Flash}}" class="form-control input-lg" placeholder="keyword for pruning"/><br/>
+	            {{end}}
+	          </div>
+	          <input type="submit" value="OK Pruning!" class="btn btn-default btn-lg"/>
+	        </form>
+	      </div>
+	    </div>
+
+
 	</header>
 
 	<div class="container">
@@ -30,6 +44,9 @@
 	      {{template "flash.html" .}}
 	    </div>
 	  </div>
+
+
+
 	</div>
 
 
